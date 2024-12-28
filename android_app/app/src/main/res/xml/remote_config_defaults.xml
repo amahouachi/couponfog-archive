@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>analytics_disabled_events</key>
+        <value>null</value>
+    </entry>
+    <entry>
+        <key>ads_disabled</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>ad_click_credit_minutes</key>
+        <value>5</value>
+    </entry>
+    <entry>
+        <key>ad_click_credit_views</key>
+        <value>5</value>
+    </entry>
+    <entry>
+        <key>ad_close_credit_minutes</key>
+        <value>2</value>
+    </entry>
+    <entry>
+        <key>ad_close_credit_views</key>
+        <value>2</value>
+    </entry>
+    <entry>
+        <key>shop_trip_credit_minutes</key>
+        <value>4</value>
+    </entry>
+    <entry>
+        <key>shop_trip_credit_views</key>
+        <value>4</value>
+    </entry>
+</defaultsMap>

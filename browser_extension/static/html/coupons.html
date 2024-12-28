@@ -1,0 +1,35 @@
+<div id="cf-root">
+  <div id="cf-header">
+    <nav id="cf-nav">
+        <a target="_blank" href="https://www.couponfog.com" id="cflogo">
+          <img id="cf-logo-img" src="chrome-extension://[EXTENSION_ID]/images/cflogo.png">
+        </a>
+      </nav>
+    <div id="cf-close">
+        <span id="cf-close-icon">
+          <svg id="cf-close-icon-svg" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><path d="M12.002 10.588L21.591 1l1.414 1.414-9.588 9.588 9.588 9.589-1.414 1.414-9.589-9.588-9.588 9.588L1 21.59l9.588-9.589L1 2.414 2.414 1z" fill-rule="evenodd"></path></svg>
+        </span>
+    </div>
+  </div>
+  <div id="cf-content">
+    <div id="applyCodesDiv">
+      <div class="cf-content-box">
+        <div class="cf-content-box-inner">
+            <div class="cf-autoapply-message">
+              <strong><span id="couponsTotal"></span> codes</strong> are available for this store.<br/>We can apply and check them for you.
+            </div>
+            <div id="cf-coupons-apply-button-wrapper">
+              <button id="cf-coupons-apply-button" class="apply-button-animation">Apply Codes</button>
+              <a id="cf-coupons-apply-show-coupons">or show available codes</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div id="cf-coupons" class="cf-coupons"></div>
+  </div>
+  <div>
+    <textarea id="cf-hidden-copy-holder"></textarea>
+  </div>
+</div>
+  <script>
+</script>

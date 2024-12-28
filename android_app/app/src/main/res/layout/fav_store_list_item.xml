@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+        android:id="@+id/couponListItem"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:background="#ffffff" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_marginRight="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/favStoreContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+            <TextView
+                    android:layout_centerVertical="true"
+                    android:text="Bath &amp; Body Works"
+                    android:layout_marginRight="48dp"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent" android:id="@+id/storeName"
+                    android:fontFamily="@font/poppins_semibold"/>
+            <ImageView
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:id="@+id/unfaveStore"
+                    android:tint="@color/colorFavIcon"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/baseline_favorite_border_24"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+            />
+        </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

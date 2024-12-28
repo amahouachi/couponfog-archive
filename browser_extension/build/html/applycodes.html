@@ -1,0 +1,30 @@
+<div id="cf-apply-modal-wrapper">
+  <div id="cf-apply-modal">
+    <div id="cf-header">
+      <nav id="cf-nav">
+          <a target="_blank" href="https://www.couponfog.com" id="cflogo">
+            <img id="cf-logo-img" src="chrome-extension://[EXTENSION_ID]/images/cflogo.png">
+          </a>
+      </nav>
+      <div id="cf-close">
+        <span id="cf-close-icon">
+          <svg id="cf-close-icon-svg" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><path d="M12.002 10.588L21.591 1l1.414 1.414-9.588 9.588 9.588 9.589-1.414 1.414-9.589-9.588-9.588 9.588L1 21.59l9.588-9.589L1 2.414 2.414 1z" fill-rule="evenodd"></path></svg>
+        </span>
+      </div>
+    </div>
+    <div id="cf-apply-modal-content">
+    <img id="cf-apply-success-img" src="" style="display: none; width: 100px; margin: 0 auto; padding: 8px; ">
+      <p id="cf-apply-modal-headline">CouponFog is automatically applying available codes to see which ones work and which one is the best.</p>
+      <p id="cf-applying-code-message"></p>
+      <div id="cf-apply-progress-wrapper">
+        <div id="cf-apply-progress-bar">
+          <div id="cf-apply-progress-status"></div>
+        </div>
+      </div>
+      <div id="cf-applycode-failed" style="display: none;">Unfortunately none of the available codes worked. Items in your cart might be excluded from these promotions.</div>
+      <div id="cf-applycode-success" style="display: none;">Yes! Using code <span id="cf-cart-code"></span> you save <span id="cf-cart-saving"></span><br/>
+        Total : <span id="cf-cart-before-code"></span> <span id="cf-cart-after-code"></span>
+      </div>
+    </div>
+  </div>
+  </div>

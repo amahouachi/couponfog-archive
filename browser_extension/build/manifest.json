@@ -1,0 +1,33 @@
+{
+  "background": {
+    "scripts": [ "background.js" ]
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/cficon_16_grey.png",
+      "32": "icons/cficon_32_grey.png",
+      "48": "icons/cficon_48_grey.png"
+    },
+    "default_title": "Couponfog"
+  },
+  "content_scripts": [ {
+    "all_frames": false,
+    "css": [ "css/app.css" ],
+    "js": [ "content.js"  ],
+    "match_about_blank": false,
+    "matches": [ "http://*/*", "https://*/*" ],
+    "run_at": "document_end"
+  } ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "description": "Automatically find and apply coupon codes when you shop online!",
+  "icons": {
+    "16": "icons/cficon_16.png",
+    "32": "icons/cficon_32.png",
+    "48": "icons/cficon_48.png"
+  },
+  "manifest_version": 2,
+  "name": "Couponfog",
+  "permissions": [ "tabs", "storage", "http://*/*", "https://*/*" ],
+  "version": "1.0.0",
+  "web_accessible_resources": [ "html/*", "images/*", "css/*" , "fonts/*" ]
+}

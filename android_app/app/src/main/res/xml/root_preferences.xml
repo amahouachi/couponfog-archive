@@ -1,0 +1,58 @@
+<androidx.preference.PreferenceScreen
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+            app:iconSpaceReserved="false"
+            app:title="General">
+    <Preference
+            app:iconSpaceReserved="false"
+            app:key="manage-notifications"
+            app:title="Manage notifications"
+            app:summary="Don't miss out on new offers from your favorite stores"
+    />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            app:iconSpaceReserved="false"
+            app:title="Feedback">
+
+        <Preference
+                app:iconSpaceReserved="false"
+                app:key="rate-app"
+                app:title="Rate this app"
+                app:summary="Tell others what you think about it"/>
+        <Preference
+                app:iconSpaceReserved="false"
+                app:key="share-app"
+                app:title="Share this app"
+                app:summary="Let friends and family discover it"/>
+        <Preference
+                app:iconSpaceReserved="false"
+                app:key="send-feedback"
+                app:title="Send feedback"
+                app:summary="Report issues or suggest new features"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            app:iconSpaceReserved="false"
+            app:title="Legal">
+
+        <Preference
+                app:iconSpaceReserved="false"
+                app:key="terms"
+                app:title="Terms of use"
+                />
+        <Preference
+                app:iconSpaceReserved="false"
+                app:key="privacy-policy"
+                app:title="Privacy policy"
+                />
+        <Preference
+                app:iconSpaceReserved="false"
+                app:key="affiliate-disclosure"
+                app:title="Affiliate Disclosure"
+                />
+    </PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

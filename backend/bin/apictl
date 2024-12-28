@@ -1,0 +1,65 @@
+#!/bin/bash
+
+if [[ $# -ne 2 ]]; then
+  echo "Usage: $0 <start|stop|restart> <read|write|admin>"
+  exit 1
+fi
+
+AWS_ACCESS_KEY_ID="******************"
+AWS_SECRET_ACCESS_KEY="***********************"
+
+scriptDir=$(dirname "$(readlink -f "$0")")
+workDir=$(dirname "$scriptDir")
+pidDir=/var/couponfog/api
+
+source $workDir/env/dev.env
+
+command=$1
+apiName=$2
+
+if [[ $command != "start" && $command != "stop" && $command != "restart" ]]; then
+  echo "Invalid command name : $command"
+  exit 1
+fi
+
+if [[ $apiName != "read" && $apiName != "write" && $apiName != "admin" ]]; then
+  echo "Invalid api name : $apiName"
+  exit 1
+fi
+
+cd $workDir
+
+pidFile="${pidDir}/${apiName}.pid"
+if [ ! -f "$pidFile" ]; then
+  touch "$pidFile"
+fi
+pid=$(pgrep -F "$pidFile" 2>/dev/null)
+pgrepStatus=$?
+case $command in
+  start)
+    if [[ $pgrepStatus -eq 0 ]]; then
+      echo "$apiName-api is already running"
+    fi
+    ;;
+  stop)
+    if [[ $pgrepStatus -eq 0 ]]; then
+      kill -15 $pid
+      rm -f $pidFile
+    else
+      echo "$apiName-api is not running"
+    fi
+    exit 0
+    ;;
+  restart)
+    if [[ $pgrepStatus -eq 0 ]]; then
+      kill -15 $pid
+      sleep 1s
+    fi
+    ;;
+esac
+/usr/bin/node "src/api/${apiName}-api.js" &
+echo "$!" > "$pidFile"
+
+
+
+

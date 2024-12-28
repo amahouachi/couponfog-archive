@@ -1,0 +1,5 @@
+MemoryCache,127.0.0.1,6379
+ReadApi,127.0.0.1,3000
+WriteApi,127.0.0.1,4000
+LoadBalancer 1,127.0.0.1,443
+Database,127.0.0.1,3306

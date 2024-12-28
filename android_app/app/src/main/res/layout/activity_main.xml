@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.MainActivity"
+        >
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".view.MainActivity" android:background="@color/colorPrimary">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshLayout"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="#efefef"
+                android:layout_marginTop="77dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/coupon_list"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:clipToPadding="false"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp"
+                    android:background="#efefef"
+            />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:id="@+id/noCouponsTextView"
+                    />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/activity_main_nav_header"
+            app:menu="@menu/activity_main_menu_drawer"
+    />
+
+    <com.arlib.floatingsearchview.FloatingSearchView
+            android:id="@+id/floating_search_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:floatingSearch_close_search_on_keyboard_dismiss="true"
+            app:floatingSearch_leftActionMode="showHamburger"
+            app:floatingSearch_menu="@menu/main_menu"
+            app:floatingSearch_searchBarMarginLeft="6dp"
+            app:floatingSearch_searchBarMarginRight="6dp"
+            app:floatingSearch_searchBarMarginTop="6dp"
+            app:floatingSearch_searchHintAfterFocus="Enter a store name ..."
+            app:floatingSearch_searchHintBeforeFocus="Couponfog"
+            app:floatingSearch_showSearchKey="false"
+            app:floatingSearch_suggestionsListAnimDuration="250" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

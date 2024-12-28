@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+                android:id="@+id/menu_home"
+                android:icon="@drawable/outline_home_24"
+                android:title="Home" />
+        <item
+                android:id="@+id/menu_favedstores"
+                android:icon="@drawable/baseline_favorite_border_24"
+                android:title="Favorite Stores" />
+        <item
+                android:id="@+id/menu_savedcoupons"
+                android:icon="@drawable/baseline_star_border_black_24"
+                android:title="Saved Coupons" />
+        <item
+                android:id="@+id/menu_favedcoupons"
+                android:icon="@drawable/outline_loyalty_24"
+                android:title="Your Coupons" />
+        <item
+                android:id="@+id/menu_settings"
+                android:icon="@drawable/outline_settings_24"
+                android:title="Settings" />
+
+    </group>
+
+
+</menu>

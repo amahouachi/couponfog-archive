@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+        android:id="@+id/notificationListItem"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:elevation="0dp"
+        app:strokeWidth="0dp"
+        app:cardCornerRadius="0dp"
+        android:background="#ffffff" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <FrameLayout
+                android:layout_width="72dp"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/storeLogoContainer"
+        >
+            <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/storeLogo"
+
+            />
+
+        </FrameLayout>
+        <RelativeLayout
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/storeLogoContainer"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/timestampContainer"
+                android:layout_marginTop="20dp"
+                android:id="@+id/notificationContainer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+            <TextView
+                    android:text="Bath &amp; Body Works"
+                    android:textSize="17sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/notificationTitle"
+            />
+            <TextView
+                    android:text="Take 20% Off Your Purchase of $100 Or More Online Only. For a limited Time Only. Restrictions apply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_below="@id/notificationTitle"
+                    android:id="@+id/notificationBody"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="end"
+                    android:singleLine="false"
+                    android:maxLines="1"
+            />
+        </RelativeLayout>
+        <FrameLayout
+                android:layout_width="52dp"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/notificationContainer"
+                android:id="@+id/timestampContainer"
+                android:paddingRight="6dp"
+                android:paddingLeft="6dp"
+        >
+            <TextView
+                    android:layout_gravity="center"
+                    android:text="13:34"
+                    android:textSize="12sp"
+                    android:id="@+id/timestamp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

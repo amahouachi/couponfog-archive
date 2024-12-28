@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Couponfog</string>
+    <string name="admob_account_id">ca-app-pub-4182800074699955~6932685491</string>
+    <string name="admob_interstitial_coupon_unit_id">ca-app-pub-4182800074699955/2654529137</string>
+    <string name="admob_interstitial_main_unit_id">ca-app-pub-4182800074699955/8598943152</string>
+    <string name="admob_native_coupon_unit_id">ca-app-pub-4182800074699955/5068939486</string>
+    <string name="no_saved_coupons">You have no saved coupons</string>
+    <string name="no_coupons">No coupons to display</string>
+    <string name="no_store_coupons">No coupons available right now. Add this store to your favorites and receive alerts when new coupons are added.</string>
+    <string name="ad_attribution">Ad</string>
+
+
+</resources>

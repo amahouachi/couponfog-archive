@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+            android:id="@+id/notificationsButton"
+            android:title="Notifications"
+            android:icon="@drawable/baseline_notifications_black_24"
+            app:actionLayout="@layout/notification_with_badge"
+            app:showAsAction="always"
+    />
+</menu>
