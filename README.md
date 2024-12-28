@@ -36,5 +36,6 @@ Everything is Javascript or Typescript on node/express
 ### Frontend
 
 1. React App for the main website. Caching has been used to reduce unnecessary traffic with the backend, leveraging browser LocalStorage API.
+Javascript and necessary files were stored in an S3 bucket and Cloudfront was used to serve them.
 2. Android app based on Kotlin. Caching has been used to reduce traffic.
 3. A browser extension pops up when user browses a known store, showing coupon codes available. It can also apply codes automatically if user requests it. This feature requires building a common base for coupon code application which relies on configuration that is specific to every store.
